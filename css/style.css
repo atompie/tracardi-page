@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Viga&display=swap');
+
+HTML, BODY {
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Sans";
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+.Hero {
+    background-image: url("../images/background.png");
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    align-items: start;
+    justify-items: center;
+}
+
+.BigBang {
+    color: white;
+}
+
+.Text {
+    padding-bottom: 10px;
+    background: -webkit-linear-gradient(-70deg,#fff,#64acff);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    font-weight: 600;
+    font-family: "Alegreya Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+.Tracardi {
+    font-size: 30px;
+    font-family: Viga;
+}
+
+.NavUl {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.NavUl LI {
+    display: inline-flex;
+    margin-bottom: 0;
+    list-style: none;
+    justify-content: space-between;
+    padding: 10px;
+    border: transparent 2px solid;
+}
+
+.NavUl LI:hover {
+    border-radius: 8px;
+    border: white 2px solid;
+    cursor: pointer;
+}
+
+.Download BUTTON {
+    grid-area: img;
+    padding: 20px;
+    font-size: 28px;
+    background: transparent;
+    border: solid white 4px;
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 60%;
+    margin-right: 30px;
+}
+
+/*!* Extra small devices (phones, 600px and down) *!*/
+@media only screen and (max-width: 700px) {
+    .Hero {
+        height: 650px;
+        grid-template-rows: 80px auto auto;
+        grid-template-areas: 'nav' 'text' 'img';
+    }
+    .TopMenu {
+        display: flex;
+        width: 100%;
+        padding: 50px;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: nav;
+    }
+
+    .NavUl {
+        display: none;
+    }
+    .Download BUTTON {
+        margin-top: 25px;
+    }
+
+    .BigBang {
+        grid-area: text;
+        color: white;
+        padding: 50px 30px 30px 50px;
+    }
+
+    .Text {
+        line-height: 55px;
+        font-size: 70px;
+    }
+
+    .SubText {
+        font-size: 18px;
+        grid-area: text;
+    }
+}
+
+/*!* Small devices (portrait tablets and large phones, 600px and up) *!*/
+@media only screen and (min-width: 700px) {
+    .Hero {
+        height: 650px;
+        grid-template-rows: 80px auto auto;
+        grid-template-areas: 'nav' 'text' 'img';
+    }
+    .TopMenu {
+        display: flex;
+        width: 100%;
+        padding: 50px;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: nav;
+    }
+
+    .NavUl {
+        width: 80%;
+    }
+    .Download BUTTON {
+        margin-top: 25px;
+    }
+    .BigBang {
+        grid-area: text;
+        color: white;
+        padding: 50px 30px 30px 50px;
+    }
+
+    .Text {
+        line-height: 65px;
+        font-size: 80px;
+    }
+
+    .SubText {
+        font-size: 18px;
+        grid-area: text;
+    }
+}
+
+/*!* Medium devices (landscape tablets, 768px and up) *!*/
+@media only screen and (min-width: 768px) {
+    .Hero {
+        height: 550px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 80px auto;
+        grid-template-areas: 'nav nav' 'text img';
+    }
+    .TopMenu {
+        display: flex;
+        width: 100%;
+        padding: 50px;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: nav;
+    }
+    .Download BUTTON {
+        margin-top: 60%;
+    }
+    .NavUl {
+        width: 70%;
+    }
+
+    .BigBang {
+        grid-area: text;
+        color: white;
+        padding: 50px 30px 30px 50px;
+    }
+
+    .Text {
+        line-height: 65px;
+        font-size: 80px;
+    }
+
+    .SubText {
+        font-size: 18px;
+        grid-area: text;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 992px) {
+    .Hero {
+        height: 715px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 80px auto;
+        grid-template-areas: 'nav nav' 'text img';
+    }
+    .TopMenu {
+        display: flex;
+        width: 100%;
+        padding: 50px;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: nav;
+    }
+    .Download BUTTON {
+        margin-top: 60%;
+    }
+    .NavUl {
+        width: 60%;
+    }
+
+    .BigBang {
+        grid-area: text;
+        color: white;
+        padding: 90px 30px 30px 50px;
+    }
+
+    .Text {
+        line-height: 80px;
+        margin: 0;
+        font-size: 100px;
+        font-weight: 600;
+        font-family: "Alegreya Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    }
+
+    .SubText {
+        font-size: 24px;
+        grid-area: text;
+    }
+}
+
+
+
+
